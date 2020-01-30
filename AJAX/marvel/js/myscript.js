@@ -7,10 +7,12 @@ spinner.hide();
 // handle click, ajax and add class
 button.on("click", function() {
   banner.addClass("alt");
-  output = "";
+  let output = "";
+  //plese use your own Marvel ApiKey
+  const myApiKey = "3ab1a7ad6985002c87082ccfee891dd9";
   $.ajax({
     url:
-      "https://gateway.marvel.com:443/v1/public/characters?apikey=3ab1a7ad6985002c87082ccfee891dd9",
+      "https://gateway.marvel.com:443/v1/public/characters?apikey=" + myApiKey,
     type: "GET",
     beforeStart: () => {
       spinner.show();
